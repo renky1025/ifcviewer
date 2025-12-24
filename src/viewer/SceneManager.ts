@@ -18,7 +18,7 @@ export class SceneManager {
     const height = Math.max(this.container.clientHeight, 1)
     this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 2000)
     this.camera.position.set(10, 10, 10)
-    this.renderer = new THREE.WebGLRenderer({ antialias: true })
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, logarithmicDepthBuffer: true })
     this.renderer.setPixelRatio(window.devicePixelRatio || 1)
     this.renderer.setSize(width, height)
     this.renderer.localClippingEnabled = false

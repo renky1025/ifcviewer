@@ -39,6 +39,10 @@ export class IfcViewer {
       transparent: true,
       opacity: 0.8,
       depthTest: true,
+      depthWrite: false,
+      polygonOffset: true,
+      polygonOffsetFactor: -4,
+      polygonOffsetUnits: -4,
     })
     this.selection = new IfcSelection(
       this.sceneManager.getCamera(),
